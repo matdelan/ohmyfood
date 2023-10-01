@@ -1,0 +1,40 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.title {
+  font-family: "Shrikhand", cursive;
+  display: flex;
+  justify-content: center;
+  margin: 10px 0 10px 0;
+  font-size: 2.2em;
+}
+
+.page {
+  max-width: 1440px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.search__location {
+  display: flex;
+  justify-content: center;
+  background-color: #EAEAEA;
+  padding: 20px;
+  align-content: center;
+  border-top: 3px solid grey;
+}
+
+.search__location--icon {
+  font-size: 1.2em;
+}
+
+.search__location--info {
+  margin-left: 20px;
+  font-size: 1.2em;
+}/*# sourceMappingURL=style.css.map */
