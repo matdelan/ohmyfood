@@ -26,7 +26,6 @@ body {
   justify-content: center;
   background-color: #EAEAEA;
   padding: 20px;
-  align-content: center;
   border-top: 3px solid grey;
 }
 
@@ -37,4 +36,43 @@ body {
 .search__location--info {
   margin-left: 20px;
   font-size: 1.2em;
+}
+
+.flex__center {
+  display: flex;
+  justify-content: center;
+}
+
+.search__explore {
+  flex-direction: column;
+}
+
+.search__explore--title {
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.search__explore--lighter {
+  font-weight: lighter;
+}
+
+.explore__btn {
+  width: 218px;
+}
+
+.functioning {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 50px;
+  justify-content: space-between;
+}
+
+.functioning__title {
+  width: 100%;
+}
+
+.functioning__choose {
+  width: 30%;
+  display: flex;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */
