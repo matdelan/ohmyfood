@@ -1,0 +1,14 @@
+.footer__content {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer__title {
+  font-family: "Shrikhand", cursive;
+}
+
+.footer__link {
+  display: flex;
+}/*# sourceMappingURL=footer.css.map */
