@@ -1,14 +1,27 @@
 .footer__content {
-  background-color: black;
+  background-color: #353535;
   color: white;
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
 }
 
 .footer__title {
   font-family: "Shrikhand", cursive;
+  margin-left: 40px;
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: column;
 }
 
 .footer__link {
-  display: flex;
+  list-style: none;
+  margin-bottom: 10px;
+  font-size: 1.5em;
+}
+
+.footer__link-icon {
+  font-size: 0.8em;
+  margin-right: 10px;
 }/*# sourceMappingURL=footer.css.map */
