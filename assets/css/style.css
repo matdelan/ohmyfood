@@ -20,6 +20,10 @@ body {
   justify-content: center;
 }
 
+a {
+  text-decoration: none;
+}
+
 header {
   position: relative;
 }
@@ -86,6 +90,11 @@ header {
 .search__location--info {
   margin-left: 20px;
   font-size: 1.2em;
+}
+.search__explore {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 .search__explore--title {
   font-weight: bold;
@@ -183,38 +192,7 @@ header {
   width: 30%;
   align-items: center;
   margin-right: 30px;
-  font-size: 2.5em;
-}
-
-.explore__btn {
-  border-radius: 25px/50%;
-  padding: 20px 0 20px 0;
-  background: #FF79DA;
-  background: linear-gradient(169deg, #FF79DA 0%, #9356DC 100%);
-  color: white;
-  font-size: 1.2em;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2509803922);
-  margin-bottom: 50px;
-  border: none;
-  width: 350px;
-  opacity: 1;
-  transition: all 500ms;
-}
-.explore__btn:hover {
-  opacity: 0.8;
-  cursor: pointer;
-  transform: scale(1.01);
-}
-
-.badge__new {
-  position: absolute;
-  top: 10%;
-  left: 65%;
-  padding: 10px 20px 10px 20px;
-  background-color: #99E2D0;
-  font-weight: bold;
-  color: #139273;
-  font-size: 1.1em;
+  font-size: 1.7em;
 }
 
 .title {
@@ -232,18 +210,6 @@ header {
   font-family: "Shrikhand", cursive;
   font-size: 1.7em;
   margin-left: 20px;
-}
-.title__heart {
-  display: flex;
-  align-items: center;
-  margin-right: 40px;
-  font-size: 1.5em;
-}
-.title__heart:active {
-  display: none;
-}
-.title__heart--color {
-  display: none;
 }
 .title__content {
   display: flex;
@@ -315,4 +281,56 @@ header {
   font-weight: bold;
   margin-left: auto;
   margin-right: 15px;
+}
+
+.explore__btn {
+  border-radius: 25px/50%;
+  padding: 20px 0 20px 0;
+  background: #FF79DA;
+  background: linear-gradient(169deg, #FF79DA 0%, #9356DC 100%);
+  color: white;
+  font-size: 1.2em;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2509803922);
+  margin-bottom: 50px;
+  border: none;
+  width: 350px;
+  opacity: 1;
+  transition: all 500ms;
+}
+.explore__btn:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  transform: scale(1.01);
+}
+
+.badge__new {
+  position: absolute;
+  top: 10%;
+  left: 65%;
+  padding: 10px 20px 10px 20px;
+  background-color: #99E2D0;
+  font-weight: bold;
+  color: #139273;
+  font-size: 1.1em;
+}
+
+.icon__heart {
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+  font-size: 1.5em;
+}
+.icon__heart:active {
+  display: none;
+}
+.icon__heart:active + .icon__heart--color {
+  display: flex;
+}
+.icon__heart--color {
+  display: none;
+  color: #FF79DA;
+  color: linear-gradient(169deg, #FF79DA 0%, #9356DC 100%);
+  align-items: center;
+  margin-right: 40px;
+  font-size: 1.5em;
 }/*# sourceMappingURL=style.css.map */

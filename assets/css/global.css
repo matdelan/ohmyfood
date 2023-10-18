@@ -18,4 +18,9 @@ body {
 .flex__center {
   display: flex;
   justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }/*# sourceMappingURL=global.css.map */

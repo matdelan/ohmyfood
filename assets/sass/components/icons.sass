@@ -1,0 +1,16 @@
+.icon__heart
+    display: flex
+    align-items: center
+    margin-right: 40px
+    font-size: 1.5em
+    &:active
+        display: none
+    &:active + .icon__heart--color
+        display: flex
+    &--color
+        display: none
+        color: $color-secondary
+        color: linear-gradient(169deg, $color-secondary 0%, $color-primary 100%)
+        align-items: center
+        margin-right: 40px
+        font-size: 1.5em
