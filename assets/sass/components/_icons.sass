@@ -1,0 +1,21 @@
+.icon__heart
+    display: flex
+    align-items: center
+    margin-right: 40px
+    font-size: 1.5em
+    &:hover
+        display: none
+        cursor: pointer
+    &:hover + .icon__heart--color
+        display: flex
+    &--color
+        display: none
+        background: linear-gradient(0deg, $color-secondary 0%, $color-primary 100%)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        //background-clip: text
+        //color: transparent
+        align-items: center
+        margin-right: 40px
+        font-size: 1.5em
+        
