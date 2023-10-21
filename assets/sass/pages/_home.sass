@@ -32,7 +32,10 @@
 .functioning
     display: flex
     flex-direction: column
-    margin: 20px 0 30px 0       
+    margin: 20px 0 30px 0  
+    +mq(lg)
+        width: 100%
+        margin-right: 50px     
     &__title
         flex-wrap: wrap
         flex-grow: 1
