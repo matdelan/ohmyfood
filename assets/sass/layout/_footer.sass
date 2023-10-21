@@ -3,6 +3,9 @@
     color: white
     display: flex
     flex-direction: column
+    +mq(lg)
+        flex-direction: row-reverse
+        padding: 40px 30px 10px
 
 .footer__title
     font-family: 'Shrikhand', cursive
@@ -13,11 +16,16 @@
 .footer__links
     display: flex
     flex-direction: column
+    +mq(lg)
+        flex-direction: row
+        align-items: center
 
 .footer__link
     list-style: none
-    margin-bottom: 10px
+    margin-bottom: 15px
     font-size: 1em 
+    +mq(lg)
+        margin-right: 10px
 
 .footer__link-icon
     font-size: 1em

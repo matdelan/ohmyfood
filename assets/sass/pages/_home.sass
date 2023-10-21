@@ -1,6 +1,8 @@
 .search
     background-color: $color-background-lighter
-    padding-bottom: 20px 
+    padding-bottom: 20px
+    +mq(lg)
+        width: 100% 
     &__location
         display: flex
         justify-content: center
@@ -30,12 +32,19 @@
 .functioning
     display: flex
     flex-direction: column
-    margin: 20px 0 30px 0
+    margin: 20px 0 30px 0       
     &__title
         flex-wrap: wrap
         flex-grow: 1
         justify-content: space-between
-        margin-left: 5%
+        margin-left: 5%  
+    &__content
+        +mq(lg)
+            display: flex
+            flex-direction: row 
+            margin-right: 20px
+    
+        
 
 .functioning__step
     width: 90%
@@ -69,7 +78,7 @@
     background-color: $color-background-lighter
     display: flex
     flex-wrap: wrap
-    justify-content: center
+    justify-content: space-around
     width: 100%
     padding: 40px 0 40px 0
 .restaurant__title
@@ -81,6 +90,9 @@
     display: flex
     flex-direction: column
     position: relative
+    +mq(md)
+        width: 41%
+        
     &-img
         object-fit: cover
         width: 100%

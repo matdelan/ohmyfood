@@ -1,12 +1,18 @@
-=breakpoint($point)
-  @if $point == small
-    @media (max-width: 600px)
-      @content
-  @elseif $point == medium
-    @media (max-width: 900px)
-      @content
-  @elseif $point == large
-    @media (max-width: 1200px)
-      @content
+//=breakpoint($point)
+//  @if $point == small
+//    @media (max-width: 600px)
+//      @content
+//  @elseif $point == medium
+//    @media (max-width: 900px)
+//      @content
+//  @elseif $point == large
+//    @media (max-width: 1200px)
+//      @content
 
 //mettre en variable les dims
+
+=mq($breakpoint)
+  @each $breakpoints, $size in $media
+    @if $breakpoint==$breakpoints
+      @media screen and (min-width : $size)
+        @content
