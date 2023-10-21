@@ -1,21 +1,93 @@
-.icon__heart
-    display: flex
-    align-items: center
+@keyframes heart
+    0%
+        opacity : 0
+    30%
+        opacity : 1
+    48%
+        scale: 1
+    52%
+        scale: 1.8
+    54%
+        scale: 1
+    62%
+        scale: 1
+    65%
+        scale: 1.8
+    69%
+        scale: 1
+    100%
+        scale: 1
+        opacity: 1
+
+
+@keyframes heart-empty
+    0%
+        opacity: 1
+    30%,100%
+        opacity: 0
+        //display: none
+    
+@keyframes animate-extend
+    0%
+        translate: 40px
+        width: 0px
+        padding: 20px 0px 20px 0px
+        //transform: scaleX(0)
+    100%
+        translate: 10px
+        width: 50px
+        padding: 20px 15px 20px 15px
+        //transform: scaleX(1)
+
+.icon__heart  
     margin-right: 40px
     font-size: 1.5em
+    z-index: 100
     &:hover
-        display: none
         cursor: pointer
+        animation: heart-empty 3000ms ease-in-out alternate both
     &:hover + .icon__heart--color
-        display: flex
+        animation: heart 3000ms ease-in-out alternate both
     &--color
-        display: none
+        position: absolute
+        z-index: 10
+        right: 0
+        opacity: 0
         background: linear-gradient(0deg, $color-secondary 0%, $color-primary 100%)
         -webkit-background-clip: text
         -webkit-text-fill-color: transparent
-        //background-clip: text
-        //color: transparent
-        align-items: center
+        background-clip: text
+        color: transparent
         margin-right: 40px
         font-size: 1.5em
+        animation-fill-mode: forwards
+
+.anim__extend
+    position: relative 
+    z-index: 1
+    //right: 0
+    display: none
+    background-color: $color-tertiary
+    border-radius: 0 20px 20px 0 / 20px
+    overflow: hidden
+    &-icon
+        color: $color-tertiary
+        background: white
+        border-radius: 100%
+        font-size: 2em
+.menu__title
+    z-index: 2
+    position: absolute
+.menus__content
+    z-index: 0
+    &:active
+        //background-color: grey
+    &:active > .anim__extend
+            display: flex
+            animation: animate-extend 500ms ease-in-out alternate forwards
+            //animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+            //-webkit-animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+
         
+    
+
