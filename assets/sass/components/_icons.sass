@@ -30,14 +30,26 @@
 @keyframes animate-extend
     0%
         translate: 40px
-        width: 0px
+        //width: 0px
         padding: 20px 0px 20px 0px
         //transform: scaleX(0)
     100%
         translate: 10px
-        width: 50px
+        //width: 50px
         padding: 20px 15px 20px 15px
         //transform: scaleX(1)
+
+@keyframes anim-menus
+    0%
+        transform: translateX(100%)
+    100%
+        transform: translateX(0px)
+        
+@keyframes anim-content
+    20%
+        transform: translateX(100%)
+    100%
+        transform: translateX(0px)
 
 .icon__heart  
     margin-right: 40px
@@ -75,11 +87,21 @@
         background: white
         border-radius: 100%
         font-size: 2em
-.menu__title
+.menus__title
     z-index: 2
-    position: absolute
+    //position: absolute
+    transform: translateX(120%)
+    animation: anim-menus 750ms alternate forwards
+    &:nth-child(1)
+        animation-delay: 100ms       
+    &:nth-child(2)
+        animation-delay: 400ms
+    &:nth-child(3)
+        animation-delay: 800ms
 .menus__content
     z-index: 0
+    animation: anim-content 750ms forwards alternate
+    transform: translateX(120%)
     &:active
         //background-color: grey
     &:active > .anim__extend
@@ -87,7 +109,69 @@
             animation: animate-extend 500ms ease-in-out alternate forwards
             //animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
             //-webkit-animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
-
-        
+   
+    &:nth-child(3)
+        animation-delay: 200ms
+    &:nth-child(4)
+        animation-delay: 300ms
+    &:nth-child(5)
+        animation-delay: 400ms
     
+@keyframes animate-boxs
+    0%
+        transform: scaleY(0.25) 
+    100%
+        transform: scaleY(1.5)
+@keyframes animate-loading
+    90%
+        opacity: 0.8  
+        z-index: 1  
+    100%
+        opacity: 0
+        z-index: -10
 
+.loading
+    position: absolute
+    background: $color-tertiary
+    opacity: 0.85
+    width: 100%
+    height: 100%
+    overflow: hidden
+    animation: animate-loading 1500ms forwards
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: row
+    &:hover
+        cursor: none
+
+.anim__boxs
+    position: absolute
+    display: flex   
+    border: 5px solid $color-primary
+    padding: 50px
+    border-radius: 50%
+    
+    &-box
+        padding: 38px 7px
+        background: red
+        //border: 2px solid $color-tertiary
+        margin-right: 3px
+        animation: animate-boxs 250ms ease-in-out alternate both 10 
+        &1
+            background: $color-secondary
+            animation-delay: 0ms 
+        &2
+            background: $color-primary
+            animation-delay: 50ms
+        &3
+            background: $color-secondary
+            animation-delay: 100ms
+        &4
+            background: $color-primary
+            animation-delay: 150ms 
+        &5
+            background: $color-secondary
+            animation-delay: 200ms
+            
+    
