@@ -431,6 +431,7 @@ header {
   width: 260px;
   opacity: 1;
   transition: all 500ms;
+  text-align: center;
 }
 .explore__btn:hover {
   opacity: 0.8;
