@@ -30,7 +30,6 @@
 @keyframes animate-extend
     0%
         translate: 40px
-        //width: 0px
         padding: 20px 0px 20px 0px
         //transform: scaleX(0)
     100%
@@ -52,9 +51,9 @@
         transform: translateX(0px)
 
 .icon__heart  
-    margin-right: 40px
     font-size: 1.5em
     z-index: 100
+    position: relative
     &:hover
         cursor: pointer
         animation: heart-empty 3000ms ease-in-out alternate both
@@ -63,21 +62,17 @@
     &--color
         position: absolute
         z-index: 10
-        right: 0
         opacity: 0
         background: linear-gradient(0deg, $color-secondary 0%, $color-primary 100%)
         -webkit-background-clip: text
         -webkit-text-fill-color: transparent
         background-clip: text
         color: transparent
-        margin-right: 40px
         font-size: 1.5em
-        animation-fill-mode: forwards
 
 .anim__extend
     position: relative 
     z-index: 1
-    //right: 0
     display: none
     background-color: $color-tertiary
     border-radius: 0 20px 20px 0 / 20px
@@ -87,6 +82,7 @@
         background: white
         border-radius: 100%
         font-size: 2em
+
 .menus__title
     z-index: 2
     //position: absolute
@@ -109,7 +105,6 @@
             animation: animate-extend 500ms ease-in-out alternate forwards
             //animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
             //-webkit-animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
-   
     &:nth-child(3)
         animation-delay: 200ms
     &:nth-child(4)
@@ -144,6 +139,8 @@
     justify-content: center
     align-items: center
     flex-direction: row
+    top: 0
+    left: 0
     &:hover
         cursor: none
 
@@ -153,11 +150,8 @@
     border: 5px solid $color-primary
     padding: 50px
     border-radius: 50%
-    
     &-box
         padding: 38px 7px
-        background: red
-        //border: 2px solid $color-tertiary
         margin-right: 3px
         animation: animate-boxs 250ms ease-in-out alternate both 10 
         &1

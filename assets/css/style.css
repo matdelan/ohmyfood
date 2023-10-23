@@ -6,6 +6,7 @@ body {
   display: flex;
   justify-content: center;
   margin: 0;
+  position: relative;
 }
 
 .page {
@@ -268,6 +269,7 @@ header {
   width: 30%;
   align-items: center;
   font-size: 1.2em;
+  margin-right: 30px;
 }
 .restaurant__article-location {
   font-weight: 100;
@@ -303,8 +305,9 @@ header {
 }
 .title__text {
   font-family: "Shrikhand", cursive;
-  font-size: 1.7em;
-  margin-left: 20px;
+  font-size: 2.5em;
+  margin: 20px 20px 0px 5%;
+  font-weight: normal;
 }
 @media screen and (min-width: 1024px) {
   .title__text {
@@ -331,6 +334,7 @@ header {
 }
 .title__heart {
   display: flex;
+  margin: 20px 40px 0px 5%;
 }
 
 .menus {
@@ -521,9 +525,9 @@ header {
   }
 }
 .icon__heart {
-  margin-right: 40px;
   font-size: 1.5em;
   z-index: 100;
+  position: relative;
 }
 .icon__heart:hover {
   cursor: pointer;
@@ -535,16 +539,13 @@ header {
 .icon__heart--color {
   position: absolute;
   z-index: 10;
-  right: 0;
   opacity: 0;
   background: linear-gradient(0deg, #FF79DA 0%, #9356DC 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   color: transparent;
-  margin-right: 40px;
   font-size: 1.5em;
-  animation-fill-mode: forwards;
 }
 
 .anim__extend {
@@ -629,6 +630,8 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  top: 0;
+  left: 0;
 }
 .loading:hover {
   cursor: none;
@@ -643,7 +646,6 @@ header {
 }
 .anim__boxs-box {
   padding: 38px 7px;
-  background: red;
   margin-right: 3px;
   animation: animate-boxs 250ms ease-in-out alternate both 10;
 }
