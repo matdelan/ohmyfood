@@ -460,6 +460,7 @@ header {
   }
 }
 
+/* Animation du coeur */
 @keyframes heart {
   0% {
     opacity: 0;
@@ -498,32 +499,6 @@ header {
     opacity: 0;
   }
 }
-@keyframes animate-extend {
-  0% {
-    translate: 40px;
-    padding: 20px 0px 20px 0px;
-  }
-  100% {
-    translate: 10px;
-    padding: 20px 15px 20px 15px;
-  }
-}
-@keyframes anim-menus {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(0px);
-  }
-}
-@keyframes anim-content {
-  20% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(0px);
-  }
-}
 .icon__heart {
   font-size: 1.5em;
   z-index: 100;
@@ -548,13 +523,22 @@ header {
   font-size: 1.5em;
 }
 
+/* Animation check de validation */
+@keyframes animate-extend {
+  0% {
+    padding: 22px 0px 22.5px 0px;
+  }
+  100% {
+    translate: 1px;
+    padding: 22px 25px 22.5px 25px;
+  }
+}
 .anim__extend {
   position: relative;
   z-index: 1;
   display: none;
   background-color: #99E2D0;
   border-radius: 0 20px 20px 0/20px;
-  overflow: hidden;
 }
 .anim__extend-icon {
   color: #99E2D0;
@@ -563,6 +547,23 @@ header {
   font-size: 2em;
 }
 
+/* Animation menus */
+@keyframes anim-menus {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@keyframes anim-content {
+  20% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
 .menus__title {
   z-index: 2;
   transform: translateX(120%);
@@ -582,8 +583,9 @@ header {
   z-index: 0;
   animation: anim-content 750ms forwards alternate;
   transform: translateX(120%);
+  position: relative;
 }
-.menus__content:active > .anim__extend {
+.menus__content:hover > .anim__extend {
   display: flex;
   animation: animate-extend 500ms ease-in-out alternate forwards;
 }
@@ -600,6 +602,7 @@ header {
   animation-delay: 500ms;
 }
 
+/* Animation loading */
 @keyframes animate-boxs {
   0% {
     transform: scaleY(0.25);

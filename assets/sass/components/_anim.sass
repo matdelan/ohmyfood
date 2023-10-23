@@ -1,3 +1,4 @@
+/* Animation du coeur */
 @keyframes heart
     0%
         opacity : 0
@@ -19,36 +20,12 @@
         scale: 1
         opacity: 1
 
-
 @keyframes heart-empty
     0%
         opacity: 1
     30%,100%
         opacity: 0
         //display: none
-    
-@keyframes animate-extend
-    0%
-        translate: 40px
-        padding: 20px 0px 20px 0px
-        //transform: scaleX(0)
-    100%
-        translate: 10px
-        //width: 50px
-        padding: 20px 15px 20px 15px
-        //transform: scaleX(1)
-
-@keyframes anim-menus
-    0%
-        transform: translateX(100%)
-    100%
-        transform: translateX(0px)
-        
-@keyframes anim-content
-    20%
-        transform: translateX(100%)
-    100%
-        transform: translateX(0px)
 
 .icon__heart  
     font-size: 1.5em
@@ -68,20 +45,45 @@
         -webkit-text-fill-color: transparent
         background-clip: text
         color: transparent
-        font-size: 1.5em
+        font-size: 1.5em    
 
+/* Animation check de validation */
+@keyframes animate-extend
+    0%
+        //translate: 40px
+        padding: 22px 0px 22.5px 0px
+        //transform: scaleX(0)
+    100%
+        translate: 1px
+        //width: 50px
+        padding: 22px 25px 22.5px 25px
+        //transform: scaleX(1)
+    
 .anim__extend
     position: relative 
     z-index: 1
     display: none
     background-color: $color-tertiary
     border-radius: 0 20px 20px 0 / 20px
-    overflow: hidden
+    //overflow: hidden
     &-icon
         color: $color-tertiary
         background: white
         border-radius: 100%
         font-size: 2em
+
+/* Animation menus */
+@keyframes anim-menus
+    0%
+        transform: translateX(100%)
+    100%
+        transform: translateX(0px)
+        
+@keyframes anim-content
+    20%
+        transform: translateX(100%)
+    100%
+        transform: translateX(0px)
 
 .menus__title
     z-index: 2
@@ -98,9 +100,10 @@
     z-index: 0
     animation: anim-content 750ms forwards alternate
     transform: translateX(120%)
+    position: relative 
     &:active
         //background-color: grey
-    &:active > .anim__extend
+    &:hover > .anim__extend
             display: flex
             animation: animate-extend 500ms ease-in-out alternate forwards
             //animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
@@ -114,6 +117,7 @@
     &:nth-child(6)
         animation-delay: 500ms
     
+/* Animation loading */
 @keyframes animate-boxs
     0%
         transform: scaleY(0.25) 
