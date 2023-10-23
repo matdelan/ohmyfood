@@ -50,28 +50,26 @@
 /* Animation check de validation */
 @keyframes animate-extend
     0%
-        //translate: 40px
-        padding: 22px 0px 22.5px 0px
-        //transform: scaleX(0)
+        padding: 18px 0px 19px 0px
+        transform: scaleX(0) translate(60px)
+    50%
+        transform: scaleX(1) translate(0px)
     100%
-        translate: 1px
-        //width: 50px
-        padding: 22px 25px 22.5px 25px
-        //transform: scaleX(1)
-    
+        padding: 18px 20px 19px 20px
+
+
 .anim__extend
-    position: relative 
-    z-index: 1
     display: none
+    position: relative
     background-color: $color-tertiary
     border-radius: 0 20px 20px 0 / 20px
-    //overflow: hidden
+    height: 32px
     &-icon
         color: $color-tertiary
         background: white
         border-radius: 100%
         font-size: 2em
-
+        
 /* Animation menus */
 @keyframes anim-menus
     0%
@@ -86,8 +84,6 @@
         transform: translateX(0px)
 
 .menus__title
-    z-index: 2
-    //position: absolute
     transform: translateX(120%)
     animation: anim-menus 750ms alternate forwards
     &:nth-child(1)
@@ -96,18 +92,13 @@
         animation-delay: 400ms
     &:nth-child(3)
         animation-delay: 700ms
+
 .menus__content
-    z-index: 0
     animation: anim-content 750ms forwards alternate
     transform: translateX(120%)
-    position: relative 
-    &:active
-        //background-color: grey
     &:hover > .anim__extend
-            display: flex
-            animation: animate-extend 500ms ease-in-out alternate forwards
-            //animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
-            //-webkit-animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+        display: flex
+        animation: animate-extend 500ms ease-in-out alternate forwards
     &:nth-child(3)
         animation-delay: 200ms
     &:nth-child(4)
@@ -141,7 +132,6 @@
     animation: animate-loading 1500ms forwards
     display: flex
     justify-content: center
-    align-items: center
     flex-direction: row
     top: 0
     left: 0
@@ -151,6 +141,7 @@
 .anim__boxs
     position: absolute
     display: flex   
+    top:18%
     border: 5px solid $color-primary
     padding: 50px
     border-radius: 50%

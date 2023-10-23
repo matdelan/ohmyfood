@@ -7,6 +7,7 @@ body {
   justify-content: center;
   margin: 0;
   position: relative;
+  min-width: 300px;
 }
 
 .page {
@@ -53,6 +54,11 @@ header {
 }
 .header__title--shadow {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1490196078);
+}
+@media screen and (min-width: 1024px) {
+  .header__title--shadow {
+    box-shadow: none;
+  }
 }
 
 .index__link {
@@ -149,11 +155,22 @@ header {
   padding: 15px 40px 0 40px;
   margin-bottom: 0;
 }
+@media screen and (min-width: 1024px) {
+  .search__explore--title {
+    font-size: 2.4em;
+  }
+}
 .search__explore--lighter {
   font-weight: lighter;
   font-size: 1.2em;
   text-align: center;
   margin-bottom: 30px;
+}
+@media screen and (min-width: 1024px) {
+  .search__explore--lighter {
+    font-size: 1.1em;
+    margin-top: 30px;
+  }
 }
 
 .functioning {
@@ -305,12 +322,13 @@ header {
 }
 .title__text {
   font-family: "Shrikhand", cursive;
-  font-size: 2.5em;
+  font-size: 1.5em;
   margin: 20px 20px 0px 5%;
   font-weight: normal;
 }
 @media screen and (min-width: 1024px) {
   .title__text {
+    font-size: 2.5em;
     margin-right: 30px;
   }
 }
@@ -323,8 +341,8 @@ header {
   border-top-left-radius: 35px;
   border-top-right-radius: 35px;
   position: absolute;
+  bottom: -1px;
   width: 100%;
-  bottom: 0;
 }
 @media screen and (min-width: 1024px) {
   .title__content {
@@ -380,15 +398,16 @@ header {
   margin-bottom: 15px;
   box-shadow: 4px 2px 8px 0px rgba(200, 200, 200, 0.5);
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-end;
   z-index: 10;
 }
 .menus__content--status {
   margin: 0;
-  text-align: start;
-  display: flex;
   overflow: hidden;
-  text-overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 80%;
 }
 .menus__content-text {
   font-size: 1.2em;
@@ -399,24 +418,16 @@ header {
   font-weight: lighter;
   font-size: 1.1em;
   padding: 0 0 10px 15px;
-  width: 80%;
-  overflow: hidden;
-  text-overflow: hidden;
 }
 .menus__content-price {
   font-weight: bold;
   font-size: 1.2em;
-  padding: 5px 0 10px 15px;
+  padding: 5px 0 10px 0px;
   margin-right: 20px;
 }
-.menus__content-subcontent {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
 .menus__content-box {
-  width: 100%;
+  width: 90%;
+  overflow: hidden;
 }
 .menus__content:hover {
   cursor: pointer;
@@ -441,6 +452,7 @@ header {
   opacity: 0.8;
   cursor: pointer;
   transform: scale(1.01);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.0862745098);
 }
 
 .badge__new {
@@ -526,19 +538,22 @@ header {
 /* Animation check de validation */
 @keyframes animate-extend {
   0% {
-    padding: 22px 0px 22.5px 0px;
+    padding: 18px 0px 19px 0px;
+    transform: scaleX(0) translate(60px);
+  }
+  50% {
+    transform: scaleX(1) translate(0px);
   }
   100% {
-    translate: 1px;
-    padding: 22px 25px 22.5px 25px;
+    padding: 18px 20px 19px 20px;
   }
 }
 .anim__extend {
-  position: relative;
-  z-index: 1;
   display: none;
+  position: relative;
   background-color: #99E2D0;
   border-radius: 0 20px 20px 0/20px;
+  height: 32px;
 }
 .anim__extend-icon {
   color: #99E2D0;
@@ -565,7 +580,6 @@ header {
   }
 }
 .menus__title {
-  z-index: 2;
   transform: translateX(120%);
   animation: anim-menus 750ms alternate forwards;
 }
@@ -580,10 +594,8 @@ header {
 }
 
 .menus__content {
-  z-index: 0;
   animation: anim-content 750ms forwards alternate;
   transform: translateX(120%);
-  position: relative;
 }
 .menus__content:hover > .anim__extend {
   display: flex;
@@ -631,7 +643,6 @@ header {
   animation: animate-loading 1500ms forwards;
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-direction: row;
   top: 0;
   left: 0;
@@ -643,6 +654,7 @@ header {
 .anim__boxs {
   position: absolute;
   display: flex;
+  top: 18%;
   border: 5px solid #9356DC;
   padding: 50px;
   border-radius: 50%;
