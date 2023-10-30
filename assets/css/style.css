@@ -109,6 +109,7 @@ header {
   list-style: none;
   margin-bottom: 15px;
   font-size: 1em;
+  cursor: pointer;
 }
 @media screen and (min-width: 1024px) {
   .footer__link {
