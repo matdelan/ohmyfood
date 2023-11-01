@@ -35,6 +35,11 @@ a {
   color: black;
 }
 
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
 header {
   position: relative;
 }
@@ -295,7 +300,7 @@ header {
 }
 .restaurant__article-title {
   margin-bottom: 0;
-  font-weight: 10000;
+  font-weight: 1000;
   font-size: 1.2em;
 }
 .restaurant__article-location {
@@ -482,25 +487,25 @@ header {
     opacity: 1;
   }
   48% {
-    scale: 1;
+    transform: scale(1);
   }
   52% {
-    scale: 1.8;
+    transform: scale(1.8);
   }
   54% {
-    scale: 1;
+    transform: scale(1);
   }
   62% {
-    scale: 1;
+    transform: scale(1);
   }
   65% {
-    scale: 1.8;
+    transform: scale(1.8);
   }
   69% {
-    scale: 1;
+    transform: scale(1);
   }
   100% {
-    scale: 1;
+    transform: scale(1);
     opacity: 1;
   }
 }
